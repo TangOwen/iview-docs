@@ -167,7 +167,7 @@ export default {
   },
   mounted() {
     this.lang = this.$lang
-    this.liziInit()
+    //this.liziInit()
   },
   beforeDestroy() {
     if (this.interval) clearInterval(this.interval)
