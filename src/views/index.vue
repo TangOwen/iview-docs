@@ -12,7 +12,36 @@
 </style>
 <template>
     <div>
-        aa
+        <div class="index">
+            <div class="bg"><span></span></div>
+            <Row type="flex" justify="center" align="middle" style="position: relative;z-index: 3">
+                <i-col span="24">
+                    <h1>
+                        <img src="../images/logo.png" class="img-logo">
+                        <img src="../images/name.png" class="img-name">
+                    </h1>
+                    <h2>{{ $t('index.title') }}</h2>
+                    <div class="list">
+                        <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
+                        <router-link :to="'/docs/guide/install' + suffix">{{ $t('index.component') }}</router-link>
+                        <router-link :to="'/docs/practice/case' + suffix">{{ $t('index.practice') }}</router-link>
+                        <router-link :to="'/overview' + suffix">{{ $t('index.overview') }}</router-link>
+                        <router-link :to="'/cli' + suffix">{{ $t('index.cli') }}</router-link>
+                        <a href="https://github.com/iview/iview" target="_blank">
+                            <Icon type="social-github"></Icon>
+                            GitHub
+                        </a>
+                    </div>
+                </i-col>
+            </Row>
+        </div>
+        <div id="indexLizi"></div>
+        <div class="index-lang">
+            <span @click="handleChangeLang">
+                <template v-if="lang === 'zh-CN'">EN</template>
+                <template v-else>中文</template>
+            </span>
+        </div>
     </div>
 </template>
 <script>
@@ -133,12 +162,12 @@ export default {
     },
     handleChangeLang() {
       const lang = this.lang === "zh-CN" ? "en-US" : "zh-CN"
-      // bus.$emit("on-change-lang", lang, "/")
+      bus.$emit("on-change-lang", lang, "/")
     }
   },
   mounted() {
     this.lang = this.$lang
-    //this.liziInit()
+    this.liziInit()
   },
   beforeDestroy() {
     if (this.interval) clearInterval(this.interval)
