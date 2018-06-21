@@ -8,7 +8,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var fs = require('fs');
 
-config.output.publicPath = './dist/';
+// 必须带斜杠，注意千万别和out路径搞混调
+config.output.publicPath = '/iview-doc/';
 config.output.filename = '[name].[hash].js';                 // 带hash值的入口js名称
 config.output.chunkFilename = '[name].[hash].chunk.js';      // 带hash值的路由js名称
 
