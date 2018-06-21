@@ -73,9 +73,10 @@ router.afterEach((to, from, next) => {
         _hmt.push(['_trackEvent', 'page', to.path]);
     }
 });
+console.log('init');
 
 new Vue({
     el: '#app',
-    router: router,
+    // router: router,
     render: h => h(App)
 });
