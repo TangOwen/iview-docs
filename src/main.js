@@ -77,6 +77,6 @@ console.log('init');
 
 new Vue({
     el: '#app',
-    // router: router,
+    router: router,
     render: h => h(App)
 });

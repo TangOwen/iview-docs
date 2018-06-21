@@ -932,10 +932,6 @@ const routers = [
             title: 'Scroll'
         },
         component: (resolve) => require(['./views/components/scroll-en.vue'], resolve)
-    },
-    {
-        path: '*',
-        redirect: '/'
     }
 ];
 
