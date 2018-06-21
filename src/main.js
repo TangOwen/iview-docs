@@ -39,7 +39,7 @@ bus.$on('on-change-lang', (lang, path) => {
     // Vue.config.lang = lang;
     // bus.lang = lang;
     window.localStorage.setItem('language', lang);
-    window.location.href = path;
+    // window.location.href = path;
 });
 
 // 多语言配置
