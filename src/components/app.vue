@@ -16,12 +16,12 @@
 <template>
     <div>
         <router-view></router-view>
-        <Back-top></Back-top>
+        <!-- <Back-top></Back-top>
         <transition name="fade">
             <div class="loading" v-show="loading">
                 <Icon type="load-c" size="18" class="icon-loading"></Icon>
             </div>
-        </transition>
+        </transition> -->
         <!--<Modal v-if="lang === 'zh-CN'" v-model="fee" title="第一期前端探索交流会" width="750" :closable="false" :mask-closable="false">-->
             <!--<div class="ivu-article">-->
                 <!--<p>活动介绍：前端探索交流会 FEE(Front End Explore) 是由 TalkingData 可视化团队发起的非盈利性前端开发者交流会，旨在分享、探索和传播具有创新的、有价值的思想、灵感或经验。</p>-->
