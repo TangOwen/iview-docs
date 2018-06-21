@@ -11,7 +11,7 @@ var fs = require('fs');
 // 必须带斜杠，注意千万别和out路径搞混调
 // 本地build无法正常运行，除非是/dist/. 
 // 代表的意思是所有资源的根路径，github pages是以项目为根路径的,所以...
-config.output.publicPath = '/iview-doc/dist/';
+config.output.publicPath = '/iview-docs/dist/';
 config.output.filename = '[name].[hash].js';                 // 带hash值的入口js名称
 config.output.chunkFilename = '[name].[hash].chunk.js';      // 带hash值的路由js名称
 
